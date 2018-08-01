@@ -1,0 +1,15 @@
+@import './fonts.css';
+
+ul{
+  list-style-type: none;
+  display:inline-block;
+}
+
+li{
+  font-size:26px;
+  padding-left:36px;
+  border: solid 1px #33aaff;
+  background-repeat:no-repeat;
+  background-position: 6px 2px;
+  background-size: 26px;
+}

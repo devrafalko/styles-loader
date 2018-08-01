@@ -1,0 +1,20 @@
+{
+  "name": "styles-loader-sample",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "styles-loader": "^1.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-merge": "^4.1.3"
+  }
+}

@@ -1,0 +1,51 @@
+
+#text-samples>li{
+  &:nth-child(1){
+    font-family: 'raleway';
+    font-weight: normal;
+    font-style: italic;
+    background-image: url('./../../statics/icons/alarm.svg');
+  }
+  &:nth-child(2){
+    font-family: 'raleway';
+    font-weight: bold;
+    font-style: normal;
+    background-image: url('./../../statics/icons/basket_ok.svg');
+  }
+  &:nth-child(3){
+    font-family: 'raleway';
+    font-weight: bold;
+    font-style: italic;
+    background-image: url('./../../statics/icons/browser_ok.svg');
+  }
+  &:nth-child(4){
+    font-family: 'raleway';
+    font-weight: normal;
+    font-style: normal;
+    background-image: url('./../../statics/icons/compass.svg');
+  }
+  &:nth-child(5){
+    font-family: 'open-sans';
+    font-weight: normal;
+    font-style: normal;
+    background-image: url('./../../statics/icons/heart.svg');
+  }
+  &:nth-child(6){
+    font-family: 'open-sans';
+    font-weight: normal;
+    font-style: italic;
+    background-image: url('./../../statics/icons/map.svg');
+  }
+  &:nth-child(7){
+    font-family: 'open-sans';
+    font-weight: bold;
+    font-style: normal;
+    background-image: url('./../../statics/icons/power.svg');
+  }
+  &:nth-child(8){
+    font-family: 'open-sans';
+    font-weight: bold;
+    font-style: italic;
+    background-image: url('./../../statics/icons/terminal.svg');
+  }
+}
