@@ -1,51 +1,29 @@
+@use "sass:map";
+@use "sass:list";
+
+$path: './../../statics/icons/';
+$items: (
+  ("family": 'raleway', "weight": normal, "style": italic, "file": 'alarm.svg'),
+  ("family": 'raleway', "weight": bold, "style": normal, "file": 'basket_ok.svg'),
+  ("family": 'raleway', "weight": bold, "style": italic, "file": 'browser_ok.svg'),
+  ("family": 'raleway', "weight": normal, "style": normal, "file": 'compass.svg'),
+  ("family": 'open-sans', "weight": normal, "style": normal, "file": 'heart.svg'),
+  ("family": 'open-sans', "weight": normal, "style": italic, "file": 'map.svg'),
+  ("family": 'open-sans', "weight": bold, "style": normal, "file": 'power.svg'),
+  ("family": 'open-sans', "weight": bold, "style": italic, "file": 'terminal.svg')
+);
+
+@function item($prop, $i){
+  @return map.get(list.nth($items, $i), $prop);
+ }
 
 #text-samples>li{
-  &:nth-child(1){
-    font-family: 'raleway';
-    font-weight: normal;
-    font-style: italic;
-    background-image: url('./../../statics/icons/alarm.svg');
-  }
-  &:nth-child(2){
-    font-family: 'raleway';
-    font-weight: bold;
-    font-style: normal;
-    background-image: url('./../../statics/icons/basket_ok.svg');
-  }
-  &:nth-child(3){
-    font-family: 'raleway';
-    font-weight: bold;
-    font-style: italic;
-    background-image: url('./../../statics/icons/browser_ok.svg');
-  }
-  &:nth-child(4){
-    font-family: 'raleway';
-    font-weight: normal;
-    font-style: normal;
-    background-image: url('./../../statics/icons/compass.svg');
-  }
-  &:nth-child(5){
-    font-family: 'open-sans';
-    font-weight: normal;
-    font-style: normal;
-    background-image: url('./../../statics/icons/heart.svg');
-  }
-  &:nth-child(6){
-    font-family: 'open-sans';
-    font-weight: normal;
-    font-style: italic;
-    background-image: url('./../../statics/icons/map.svg');
-  }
-  &:nth-child(7){
-    font-family: 'open-sans';
-    font-weight: bold;
-    font-style: normal;
-    background-image: url('./../../statics/icons/power.svg');
-  }
-  &:nth-child(8){
-    font-family: 'open-sans';
-    font-weight: bold;
-    font-style: italic;
-    background-image: url('./../../statics/icons/terminal.svg');
+  @for $i from 1 through length($items) {
+    &:nth-child(#{$i}){
+      font-family: item("family", $i);
+      font-weight: item("weight", $i);
+      font-style: item("style", $i);
+      background-image: url('#{$path}#{item("file", $i)}');
+    }
   }
 }

@@ -1,6 +1,7 @@
 const props = require('typeof-properties');
 const args = require('typeof-arguments');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const sass = require('sass');
 
 module.exports = class CssStyles {
   constructor(o = {}) {
@@ -37,9 +38,14 @@ module.exports = class CssStyles {
 
   get imageWebpackDefaults(){ return {}; }
   get cssDefaults(){ return {}; }
-  get sassDefaults(){ return {}; }
   get lessDefaults(){ return {}; }
   get styleDefaults(){ return {}; }
+
+  get sassDefaults(){ 
+    return {
+      implementation: sass
+    }; 
+  }
 
   get urlDefaults(){
     return {
@@ -127,7 +133,8 @@ module.exports = class CssStyles {
           [this.styleLoader, this.cssLoader]:
           ExtractTextPlugin.extract({
             fallback:this.styleLoader,
-            use: [this.cssLoader]
+            use: [this.cssLoader],
+            publicPath: ''
           })
       },
       {
@@ -136,7 +143,8 @@ module.exports = class CssStyles {
           [this.styleLoader,this.cssLoader,this.sassLoader]:
           ExtractTextPlugin.extract({
             fallback:this.styleLoader,
-            use: [this.cssLoader, this.sassLoader]
+            use: [this.cssLoader, this.sassLoader],
+            publicPath: ''
           })
       },
       {
@@ -145,7 +153,8 @@ module.exports = class CssStyles {
           [this.styleLoader,this.cssLoader,this.lessLoader]:
           ExtractTextPlugin.extract({
             fallback:this.styleLoader,
-            use: [this.cssLoader, this.lessLoader]
+            use: [this.cssLoader, this.lessLoader],
+            publicPath: ''
           })
       }
     ];

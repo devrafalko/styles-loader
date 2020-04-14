@@ -90,7 +90,7 @@ const stylesLoader = new StylesLoader({
 ```javascript
 const stylesLoader = new StylesLoader({
   style: {
-    insertAt: 'top'
+    insert: 'head'
   }
 });
 ```
@@ -125,9 +125,7 @@ const stylesLoader = new StylesLoader({
 ```javascript
 const stylesLoader = new StylesLoader({
   url: {
-    limit: 20000, //only the files bigger than 20000 bytes will be stored in assets folder
-    name: '[hash][name].[ext]',
-    outputPath:'assets/'
+    limit: 20000 //only the files bigger than 20000 bytes will be stored in assets folder
   }
 });
 ```
@@ -166,11 +164,3 @@ const stylesLoader = new StylesLoader({
 `npm install`  
 `npm start` or `npm run build`  
 Check out how the webpack config files look like and how all assets files are handled.
-
-
-### See also
-* [webpack-icons-installer](https://www.npmjs.com/package/webpack-icons-installer)
-* [webpack-jquery-ui](https://www.npmjs.com/package/webpack-jquery-ui)
-* [webpack-bootstrap-installer](https://www.npmjs.com/package/webpack-bootstrap-installer)
-* [webpack-babel-installer](https://www.npmjs.com/package/webpack-babel-installer)
-* [webpack-karma-jasmine](https://www.npmjs.com/package/webpack-karma-jasmine)
