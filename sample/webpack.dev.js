@@ -1,15 +1,15 @@
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 const StylesLoader = require('styles-loader');
 const stylesLoader = new StylesLoader({
-  extract:'bundled.css',
+  extract: 'bundled.css',
 });
 
 module.exports = merge(common, stylesLoader, {
   mode: 'development',
   watch: true,
-  stats:{
+  stats: {
     version: false,
     colors: true,
     warnings: false,

@@ -8,7 +8,7 @@ This is a `webpack` boilerplate that covers all `plugins` and `loaders` that are
 * in order to simplify the configuration process, it uses `webpack-merge` module to combine plenty webpack configs into one [\[read more\]](https://webpack.js.org/guides/production/)
 * all you have to do is to require `styles-loader`, create the new instance of it and inject it with `merge` module
 ```javascript
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const StylesLoader = require('styles-loader'); //this is a [Function] constructor
 const stylesLoader = new StylesLoader(); //create new instace with all ready-to-use webpack rules, plugins, etc.
 
@@ -54,7 +54,7 @@ const stylesLoader = new StylesLoader({ //[Object] argument
 * In order to create one bundled `.css` file from all imported `.css`, `.sass` and `.less` files, add `extract` property to the [Object] `config`. It should indicate the [String] path to the new bundled css file, eg: `"dist/styles.css"`
 * **Remember** to add `<link rel="stylesheet" href="dist/styles.css"/>` into your `.html` file
 ```javascript
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const StylesLoader = require('styles-loader');
 const stylesLoader = new StylesLoader({
   extract: 'styles.css'
