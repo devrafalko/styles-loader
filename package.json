@@ -24,15 +24,15 @@
     "boilerplate"
   ],
   "dependencies": {
-    "css-loader": "^5.0.1",
-    "mini-css-extract-plugin": "^1.3.3",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.0",
     "file-loader": "^6.2.0",
-    "image-webpack-loader": "^7.0.1",
-    "less": "^3.13.0",
-    "less-loader": "^7.1.0",
+    "image-webpack-loader": "^8.1.0",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
     "sass": "^1.30.0",
-    "sass-loader": "^10.1.0",
-    "style-loader": "^2.0.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
     "typeof-arguments": "^5.1.3",
     "typeof-properties": "^3.1.3",
     "url-loader": "^4.1.1"
