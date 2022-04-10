@@ -10,7 +10,6 @@
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
-    "babel-cli": "^6.26.0",
     "babel-loader": "^8.2.4",
     "styles-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.1",
